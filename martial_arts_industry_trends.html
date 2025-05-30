@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martial Arts Literature: Industry Trends & Market Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- 
+        Narrative Structure Plan:
+        Section 1: The Evolving Landscape of Martial Arts Knowledge (Introduction & Key Trend)
+        Section 2: Guardians of Tradition & Digital Frontiers: Libraries & Archives Landscape
+        Section 3: The Publishing Ecosystem: Shaping Martial Arts Literature
+        Section 4: Voices of Authority: Scholarly Pursuits vs. Practitioner Focus
+        Section 5: Mapping the Canon: Influential Works & Their Lineage
+        Section 6: Market Dynamics: Access, Commercialization, and Preservation (SWOT & Access Models)
+        Section 7: Future Horizons: The Digital Frontier and Critical Engagement
+    -->
+    <!-- 
+        Visualization Choices:
+        S1 - Big Stat (Digital Growth): Goal: Inform. Vis: Single Big Number. Method: HTML Text. (NO SVG)
+        S2 - Library Types Distribution: Goal: Compare. Vis: Donut Chart. Library: Chart.js. Justification: Shows proportion of different resource types. (NO SVG)
+        S3 - Publisher Focus Areas: Goal: Compare. Vis: Stacked Bar Chart. Library: Chart.js. Justification: Shows composition and focus of publisher types. (NO SVG)
+        S4 - Academic vs. Popular Content: Goal: Compare. Vis: Grouped Bar Chart. Library: Chart.js. Justification: Direct comparison of content focus. (NO SVG)
+        S5 - Author/Text Prominence: Goal: Compare. Vis: Bubble Chart. Library: Chart.js. Justification: Shows relative importance. (NO SVG)
+        S5 - Influence Flow (Historical to Modern Masters): Goal: Organize. Vis: HTML/CSS Flow Diagram. Method: Structured HTML with Tailwind. Justification: Visualizes lineage. (NO SVG, NO MERMAID JS)
+        S6 - SWOT Analysis: Goal: Organize. Vis: HTML/CSS Quadrant. Method: Tailwind grid. Justification: Standard SWOT presentation. (NO SVG)
+        S6 - Access Model Distribution: Goal: Compare. Vis: Pie Chart. Library: Chart.js. Justification: Simple proportion of access methods. (NO SVG)
+    -->
+    <!-- Chosen Color Palette: "Energetic & Playful"
+        Primary Colors:
+        - Pink: #FF4E8C
+        - Orange: #FFAE00
+        - Yellow: #FFF200
+        - Teal: #00B0A8
+        - Purple: #7B2CBF
+        Accent/Neutral Colors:
+        - Light Gray (Background): #F3F4F6
+        - Dark Gray (Text): #1F2937
+        - White: #FFFFFF 
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6; /* Light Gray */
+            color: #1F2937; /* Dark Gray */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Standard max-width for charts */
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px; /* Base height sm:h-80 */
+            max-height: 450px; /* md:max-h-96 */
+        }
+        @media (min-width: 768px) { /* md breakpoint */
+            .chart-container {
+                height: 400px; /* md:h-96 */
+            }
+        }
+        .sticky-nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .stat-number {
+            font-size: 4rem; /* Equivalent to text-6xl */
+            font-weight: 700; /* bold */
+            color: #7B2CBF; /* Purple */
+        }
+        .section-card {
+            background-color: #FFFFFF; /* White */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        .flow-item {
+            border: 2px solid #00B0A8; /* Teal */
+            background-color: #E0F2F1; /* Light Teal */
+            color: #1F2937;
+        }
+        .flow-arrow {
+            color: #00B0A8; /* Teal */
+        }
+        .swot-card {
+            border: 2px solid;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            min-height: 150px;
+        }
+        .swot-strengths { border-color: #00B0A8; /* Teal */ }
+        .swot-weaknesses { border-color: #FFAE00; /* Orange */ }
+        .swot-opportunities { border-color: #7B2CBF; /* Purple */ }
+        .swot-threats { border-color: #FF4E8C; /* Pink */ }
+
+        /* Custom tooltip for Chart.js to handle potential multiline labels */
+        .chartjs-tooltip {
+            opacity: 0;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 3px;
+            -webkit-transition: all .1s ease;
+            transition: all .1s ease;
+            pointer-events: none;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+            padding: 4px 6px;
+            font-size: 12px;
+        }
+
+        .chartjs-tooltip-key {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-[#7B2CBF] text-white py-8 text-center">
+        <h1 class="text-4xl font-bold">The World of Martial Arts Literature</h1>
+        <p class="text-xl mt-2">An Infographic on Industry Trends & Market Research</p>
+    </header>
+
+    <nav class="sticky-nav shadow-md mb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-2 sm:space-x-4 py-3 overflow-x-auto whitespace-nowrap">
+                <a href="#section1" class="text-[#7B2CBF] hover:text-[#FF4E8C] font-semibold px-2 py-1 text-sm sm:text-base">Introduction</a>
+                <a href="#section2" class="text-[#7B2CBF] hover:text-[#FF4E8C] font-semibold px-2 py-1 text-sm sm:text-base">Libraries & Archives</a>
+                <a href="#section3" class="text-[#7B2CBF] hover:text-[#FF4E8C] font-semibold px-2 py-1 text-sm sm:text-base">Publishing Ecosystem</a>
+                <a href="#section4" class="text-[#7B2CBF] hover:text-[#FF4E8C] font-semibold px-2 py-1 text-sm sm:text-base">Scholarly vs. Practitioner</a>
+                <a href="#section5" class="text-[#7B2CBF] hover:text-[#FF4E8C] font-semibold px-2 py-1 text-sm sm:text-base">Influential Works</a>
+                <a href="#section6" class="text-[#7B2CBF] hover:text-[#FF4E8C] font-semibold px-2 py-1 text-sm sm:text-base">Market Dynamics</a>
+                <a href="#section7" class="text-[#7B2CBF] hover:text-[#FF4E8C] font-semibold px-2 py-1 text-sm sm:text-base">Future Horizons</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section id="section1" class="section-card">
+            <h2 class="text-3xl font-bold text-[#7B2CBF] mb-4 text-center">The Evolving Landscape of Martial Arts Knowledge</h2>
+            <p class="text-lg mb-6 text-center">Martial arts literature, a vital conduit for preserving techniques, philosophies, and histories, is undergoing a significant transformation. The meticulous documentation of martial knowledge, indispensable for the revival and global dissemination of arts, is increasingly accessible. This shift reflects broader trends in information consumption and academic research.</p>
+            <div class="text-center my-8">
+                <p class="text-2xl text-[#1F2937] mb-2">Estimated Growth in Digital Martial Arts Resources Access:</p>
+                <div class="stat-number animate-pulse">75%+</div>
+                <p class="text-md text-gray-600">(Over the past two decades, based on proliferation of digital archives and online publishing)</p>
+            </div>
+            <p class="text-lg mt-6 text-center">A key trend is the profound impact of digitization. Historically, accessing rare treatises or non-English manuals was a formidable challenge. Today, digital archives, online libraries, and e-publications are democratizing access, fostering deeper historical understanding and richer appreciation of diverse martial traditions worldwide.</p>
+        </section>
+
+        <section id="section2" class="section-card">
+            <h2 class="text-3xl font-bold text-[#00B0A8] mb-4 text-center">Guardians of Tradition & Digital Frontiers: The Libraries & Archives Landscape</h2>
+            <p class="text-lg mb-6">The modern "martial arts library" encompasses a diverse ecosystem. Traditional institutions like the University of Michigan Library and the Kodokan Judo Museum & Library preserve physical collections and offer scholarly access. Concurrently, specialized digital archives like Wiktenauer (for HEMA) and the Shaolin Kung Fu Online Library provide open or commercial access to historical texts, revolutionizing research possibilities. General platforms like Google Books also play a significant role in discovery.</p>
+            <div class="chart-container mx-auto">
+                <canvas id="libraryTypesChart"></canvas>
+            </div>
+            <p class="text-center mt-4 text-sm text-gray-600">The donut chart above illustrates an estimated distribution of resource types available to researchers and practitioners, highlighting the growing importance of digital archives and curated online collections alongside established institutional libraries.</p>
+        </section>
+
+        <section id="section3" class="section-card">
+            <h2 class="text-3xl font-bold text-[#FFAE00] mb-4 text-center">The Publishing Ecosystem: Shaping Martial Arts Literature</h2>
+            <p class="text-lg mb-6">A multi-layered publishing ecosystem supports the martial arts literary domain. Specialist publishers like Tuttle, Shambhala, and Kodansha cater to practitioners with instructional content and classical translations. Academic presses such as Yale University Press and ABC-CLIO contribute scholarly analyses and reference works. This diverse market structure serves different audience segments, from casual readers to dedicated scholars.</p>
+            <div class="chart-container mx-auto">
+                <canvas id="publisherFocusChart"></canvas>
+            </div>
+            <p class="text-center mt-4 text-sm text-gray-600">The stacked bar chart represents the typical focus areas of different categories of publishers, showcasing the breadth of content available, from practical instruction to deep philosophical explorations and academic research.</p>
+        </section>
+
+        <section id="section4" class="section-card">
+            <h2 class="text-3xl font-bold text-[#FF4E8C] mb-4 text-center">Voices of Authority: Scholarly Pursuits vs. Practitioner Focus</h2>
+            <p class="text-lg mb-6">The martial arts literary landscape caters to distinct audiences. Academic journals like *Ido Movement for Culture* emphasize rigorous, peer-reviewed research. In contrast, popular magazines such as *Black Belt Magazine* historically aimed for broader readership with interviews and technique demonstrations. This reflects martial arts as both a subject of scholarly inquiry and a practical pursuit. The emergence of dedicated academic journals signifies the maturation of "martial arts studies" as a distinct field.</p>
+            <div class="chart-container mx-auto">
+                <canvas id="contentFocusChart"></canvas>
+            </div>
+            <p class="text-center mt-4 text-sm text-gray-600">The chart compares the typical content focus of academic sources (journals, university press books) versus practitioner-oriented publications (magazines, instructional books), highlighting differing priorities in dissemination.</p>
+        </section>
+
+        <section id="section5" class="section-card">
+            <h2 class="text-3xl font-bold text-[#7B2CBF] mb-4 text-center">Mapping the Canon: Influential Works & Their Lineage</h2>
+            <p class="text-lg mb-6">Certain texts achieve "classic" status due to their historical impact and authority. These include historical treatises (e.g., *Bubishi*, HEMA manuals), seminal works by modern masters (e.g., Funakoshi's *Karate-Do Kyohan*, Lee's *Tao of Jeet Kune Do*), and comprehensive scholarly analyses (e.g., Draeger's series, Green's *Encyclopedia*). Understanding this canon provides a foundation for serious study.</p>
+            
+            <h3 class="text-xl font-semibold text-[#1F2937] mt-8 mb-3 text-center">Prominence of Key Authors & Foundational Texts</h3>
+            <div class="chart-container mx-auto h-[450px] md:h-[550px] max-h-[600px]">
+                <canvas id="authorProminenceChart"></canvas>
+            </div>
+            <p class="text-center mt-4 text-sm text-gray-600">The bubble chart qualitatively represents the perceived prominence of selected key authors and foundational texts within martial arts literature, based on their frequent citation and influence as discussed in the research report.</p>
+
+            <h3 class="text-xl font-semibold text-[#1F2937] mt-12 mb-6 text-center">Simplified Flow of Influence: From Ancient Wisdom to Modern Practice</h3>
+            <div class="space-y-6">
+                <div class="text-center">
+                    <div class="inline-block p-3 rounded-lg flow-item shadow-lg">Ancient Strategic Texts (e.g., Sun Tzu)</div>
+                </div>
+                <div class="flex justify-center text-3xl flow-arrow">↓</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+                    <div class="p-3 rounded-lg flow-item shadow-lg">Classical Eastern Treatises (e.g., Bubishi, Musashi)</div>
+                    <div class="p-3 rounded-lg flow-item shadow-lg">Historical European Manuals (e.g., Liechtenauer, Fiore)</div>
+                </div>
+                <div class="flex justify-center text-3xl flow-arrow">↓</div>
+                <div class="text-center">
+                    <div class="inline-block p-3 rounded-lg flow-item shadow-lg">Foundational Modern Masters (e.g., Kano, Funakoshi, Ueshiba, Lee)</div>
+                </div>
+                <div class="flex justify-center text-3xl flow-arrow">↓</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+                    <div class="p-3 rounded-lg flow-item shadow-lg">Contemporary Instructional Literature & Style-Specific Guides</div>
+                    <div class="p-3 rounded-lg flow-item shadow-lg">Modern Scholarly Analysis & Historical Research</div>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-sm text-gray-600">This simplified flow illustrates how ancient wisdom and historical documentation have influenced foundational modern masters, whose teachings, in turn, inform contemporary instructional materials and scholarly research in martial arts.</p>
+        </section>
+
+        <section id="section6" class="section-card">
+            <h2 class="text-3xl font-bold text-[#00B0A8] mb-4 text-center">Market Dynamics: Access, Commercialization, and Preservation</h2>
+            <p class="text-lg mb-6">While digitization increases accessibility, much is mediated commercially. Online stores and major retailers dominate distribution. Freely accessible archives like Project Gutenberg and Wiktenauer are vital but less common. This intertwining of preservation with commercial models influences what is published and how it's accessed, often requiring financial investment for comprehensive library building.</p>
+
+            <h3 class="text-xl font-semibold text-[#1F2937] mt-8 mb-4 text-center">SWOT Analysis: Martial Arts Literature Industry</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="swot-card swot-strengths">
+                    <h4 class="text-lg font-bold mb-2 text-[#00B0A8]">Strengths</h4>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Rich historical & philosophical depth</li>
+                        <li>Growing global practitioner base</li>
+                        <li>Increased digital accessibility of texts</li>
+                        <li>Dedicated specialist publishers & scholars</li>
+                    </ul>
+                </div>
+                <div class="swot-card swot-weaknesses">
+                    <h4 class="text-lg font-bold mb-2 text-[#FFAE00]">Weaknesses</h4>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Commercialization limiting free access to some content</li>
+                        <li>Language barriers for untranslated works</li>
+                        <li>Potential for misinformation in popular, unverified sources</li>
+                        <li>Preservation challenges for rare physical texts</li>
+                    </ul>
+                </div>
+                <div class="swot-card swot-opportunities">
+                    <h4 class="text-lg font-bold mb-2 text-[#7B2CBF]">Opportunities</h4>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Further digitization of rare & historical manuscripts</li>
+                        <li>Expansion of open-access scholarly platforms</li>
+                        <li>Cross-cultural research and translation projects</li>
+                        <li>Use of AI/ML for text analysis and discovery</li>
+                    </ul>
+                </div>
+                <div class="swot-card swot-threats">
+                    <h4 class="text-lg font-bold mb-2 text-[#FF4E8C]">Threats</h4>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Copyright restrictions hindering wider dissemination</li>
+                        <li>Decline in physical bookstores impacting discovery</li>
+                        <li>Information overload making quality discernment difficult</li>
+                        <li>Funding challenges for non-profit archives/research</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 class="text-xl font-semibold text-[#1F2937] mt-12 mb-4 text-center">Estimated Distribution of Access Models for Martial Arts Texts</h3>
+            <div class="chart-container mx-auto">
+                <canvas id="accessModelsChart"></canvas>
+            </div>
+            <p class="text-center mt-4 text-sm text-gray-600">This pie chart offers an estimation of how martial arts literature is accessed, reflecting the balance between free digital resources, various forms of purchase, and institutional access.</p>
+        </section>
+
+        <section id="section7" class="section-card">
+            <h2 class="text-3xl font-bold text-[#FFAE00] mb-4 text-center">Future Horizons: The Digital Frontier and Critical Engagement</h2>
+            <p class="text-lg mb-6">The martial arts literary field is continually evolving. New research, rediscovered texts, and fresh perspectives emerge regularly. Staying current requires ongoing engagement with new publications, scholarly work, and digital resources. The study of martial arts literature often reveals interconnectedness between traditions, enriching understanding beyond a single art. However, critical engagement is essential. Authenticity claims, interpretations of archaic language, and variations in translations present ongoing challenges, underscoring the need for scholarly editions and comparative analysis.</p>
+            <p class="text-lg mt-4 text-center">The journey through martial arts literature is a testament to the enduring quest for skill, understanding, and self-mastery. These resources are indispensable tools for a deeper, nuanced appreciation of the martial ways.</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#1F2937] text-white text-center py-6 mt-12">
+        <p>&copy; 2025 Martial Arts Literature Infographic. All data synthesized from provided research report.</p>
+        <p class="text-xs">This infographic is for illustrative purposes based on qualitative trends and information.</p>
+    </footer>
+
+    <script>
+        const CHART_COLORS = {
+            pink: '#FF4E8C',
+            orange: '#FFAE00',
+            yellow: '#FFF200',
+            teal: '#00B0A8',
+            purple: '#7B2CBF',
+            lightGray: '#D1D5DB',
+            darkGray: '#374151'
+        };
+
+        function processLabels(labels) {
+            return labels.map(label => {
+                if (typeof label === 'string' && label.length > 16) {
+                    const words = label.split(' ');
+                    const newLabel = [];
+                    let currentLine = '';
+                    for (const word of words) {
+                        if ((currentLine + word).length > 16 && currentLine.length > 0) {
+                            newLabel.push(currentLine.trim());
+                            currentLine = word + ' ';
+                        } else {
+                            currentLine += word + ' ';
+                        }
+                    }
+                    newLabel.push(currentLine.trim());
+                    return newLabel;
+                }
+                return label;
+            });
+        }
+        
+        const commonTooltipCallback = {
+            title: function(tooltipItems) {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            }
+        };
+
+        // Chart 1: Library Types Distribution
+        const libraryTypesCtx = document.getElementById('libraryTypesChart').getContext('2d');
+        new Chart(libraryTypesCtx, {
+            type: 'doughnut',
+            data: {
+                labels: processLabels(['Institutional Libraries', 'Specialized Digital Archives', 'Online Stores / Curated Collections', 'General Digital Platforms']),
+                datasets: [{
+                    label: 'Distribution of Resource Types',
+                    data: [20, 35, 25, 20], // Estimated percentages
+                    backgroundColor: [CHART_COLORS.teal, CHART_COLORS.purple, CHART_COLORS.orange, CHART_COLORS.lightGray],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: CHART_COLORS.darkGray } },
+                    tooltip: { callbacks: commonTooltipCallback }
+                }
+            }
+        });
+
+        // Chart 2: Publisher Focus Chart
+        const publisherFocusCtx = document.getElementById('publisherFocusChart').getContext('2d');
+        new Chart(publisherFocusCtx, {
+            type: 'bar', // Changed to bar for better representation of stacked concept, or could be 'bar' with stacking enabled.
+            data: {
+                labels: processLabels(['Specialist (e.g., Tuttle, Shambhala)', 'Academic (e.g., University Presses)', 'Niche/Historical (e.g., Paladin, Unique)']),
+                datasets: [
+                    {
+                        label: 'Practical Instructional',
+                        data: [40, 10, 30],
+                        backgroundColor: CHART_COLORS.teal,
+                    },
+                    {
+                        label: 'Scholarly/Historical',
+                        data: [30, 60, 40],
+                        backgroundColor: CHART_COLORS.purple,
+                    },
+                    {
+                        label: 'Philosophical/Classical Texts',
+                        data: [30, 30, 30],
+                        backgroundColor: CHART_COLORS.orange,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true, ticks: { color: CHART_COLORS.darkGray } },
+                    y: { stacked: true, ticks: { color: CHART_COLORS.darkGray }, title: { display: true, text: 'Relative Focus (%)', color: CHART_COLORS.darkGray} }
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: CHART_COLORS.darkGray } },
+                    tooltip: { callbacks: commonTooltipCallback, mode: 'index', intersect: false }
+                }
+            }
+        });
+
+        // Chart 3: Content Focus Chart (Academic vs. Popular)
+        const contentFocusCtx = document.getElementById('contentFocusChart').getContext('2d');
+        new Chart(contentFocusCtx, {
+            type: 'bar',
+            data: {
+                labels: processLabels(['Peer-Reviewed Research', 'Technique Deep Dives', 'Interviews & News', 'Philosophical Discourses']),
+                datasets: [
+                    {
+                        label: 'Academic Sources',
+                        data: [70, 40, 10, 50], // Estimated % focus
+                        backgroundColor: CHART_COLORS.pink,
+                        borderColor: CHART_COLORS.pink,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Practitioner Publications',
+                        data: [15, 65, 55, 30], // Estimated % focus
+                        backgroundColor: CHART_COLORS.teal,
+                        borderColor: CHART_COLORS.teal,
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, ticks: { color: CHART_COLORS.darkGray }, title: { display: true, text: 'Content Emphasis (%)', color: CHART_COLORS.darkGray} },
+                    x: { ticks: { color: CHART_COLORS.darkGray }}
+                },
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: CHART_COLORS.darkGray } },
+                    tooltip: { callbacks: commonTooltipCallback, mode: 'index', intersect: false }
+                }
+            }
+        });
+        
+        // Chart 4: Author Prominence Chart
+        const authorProminenceCtx = document.getElementById('authorProminenceChart').getContext('2d');
+        new Chart(authorProminenceCtx, {
+            type: 'bubble',
+            data: {
+                labels: [], // Labels are part of dataset for bubble charts
+                datasets: [{
+                    label: 'Miyamoto Musashi (Go Rin No Sho)',
+                    data: [{ x: 10, y: 20, r: 25 }], // x, y for positioning, r for size (prominence)
+                    backgroundColor: CHART_COLORS.purple,
+                }, {
+                    label: 'Sun Tzu (Art of War)',
+                    data: [{ x: 15, y: 25, r: 28 }],
+                    backgroundColor: CHART_COLORS.teal,
+                }, {
+                    label: 'Gichin Funakoshi',
+                    data: [{ x: 20, y: 15, r: 22 }],
+                    backgroundColor: CHART_COLORS.orange,
+                }, {
+                    label: 'Bruce Lee',
+                    data: [{ x: 25, y: 22, r: 30 }],
+                    backgroundColor: CHART_COLORS.pink,
+                }, {
+                    label: 'Donn F. Draeger',
+                    data: [{ x: 30, y: 18, r: 20 }],
+                    backgroundColor: CHART_COLORS.yellow,
+                    borderColor: CHART_COLORS.darkGray, // Make yellow more visible
+                    borderWidth: 1
+                }, {
+                    label: 'Wiktenauer (HEMA Texts)',
+                    data: [{ x: 12, y: 10, r: 18 }],
+                    backgroundColor: CHART_COLORS.lightGray,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { display: false }, // Hide axes for abstract representation
+                    y: { display: false }
+                },
+                plugins: {
+                    legend: { display: true, position: 'bottom', labels: { color: CHART_COLORS.darkGray, boxWidth:15, padding:15 } },
+                    tooltip: { 
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': Prominence ' + context.raw.r;
+                            },
+                            title: () => null // No title for bubbles for cleaner look
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 5: Access Models Chart
+        const accessModelsCtx = document.getElementById('accessModelsChart').getContext('2d');
+        new Chart(accessModelsCtx, {
+            type: 'pie',
+            data: {
+                labels: processLabels(['Free Digital (Archives, Public Domain)', 'Commercial Digital (E-books, Paid Access)', 'Commercial Physical (New & Used Books)', 'Institutional Access (Libraries)']),
+                datasets: [{
+                    label: 'Access Model Distribution',
+                    data: [25, 35, 30, 10], // Estimated percentages
+                    backgroundColor: [CHART_COLORS.teal, CHART_COLORS.orange, CHART_COLORS.pink, CHART_COLORS.purple],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: CHART_COLORS.darkGray } },
+                    tooltip: { callbacks: commonTooltipCallback }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
