@@ -2,7 +2,7 @@
 
   *The pursuit of knowledge in the martial arts is a journey enriched by its vast and varied literary landscape. This report has endeavored to map out the key resources available.*
 
-  ![Uploading Gemini_Generated_Image_pjvut5pjvut5pjvu.png…]()
+[ [ ![Uploading Gemini_Generated_Image_pjvut5pjvut5pjvu.png…]()](https://github.com/GizzZmo/martial_arts/blob/main/GeminiAPI-generated-5in1)](https://github.com/GizzZmo/martial_arts/blob/main/GeminiAPI-generated-5in1)
 
 
 ***Guardians of Tradition & Digital Frontiers: The Libraries & Archives Landscape***
