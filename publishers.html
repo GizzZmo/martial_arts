@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishers - Martial Arts Literature Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth;
+        }
+        .prose table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .prose th, .prose td { 
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 0.75rem;
+            text-align: left; 
+            font-size: 0.9em;
+        }
+        .prose th { 
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 { 
+            margin-top: 1.5em; 
+            margin-bottom: 0.75em; 
+            line-height: 1.3;
+        }
+        .prose h1 { font-size: 2.25rem; }
+        .prose h2 { font-size: 1.875rem; }
+        .prose h3 { font-size: 1.5rem; font-weight: 600; color: #374151; }
+        .prose h4 { font-size: 1.25rem; font-weight: 600; color: #4b5563; }
+        .prose h5 { font-size: 1.125rem; font-weight: 600; color: #6b7280; }
+        .prose h6 { font-size: 1rem; font-weight: 600; color: #6b7280; }
+        .prose p { 
+            margin-bottom: 1em; 
+            line-height: 1.7; 
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            transform: translateX(4px);
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Publishers</h1>
+                    <p class="text-gray-600">Leading Publishers and Purveyors of Martial Arts Texts</p>
+                </div>
+                <a href="wiki.html" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    ← Back to Wiki
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation breadcrumb -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex items-center space-x-2 text-sm text-gray-500">
+                <a href="wiki.html" class="text-blue-600 hover:text-blue-800">Wiki Home</a>
+                <span>→</span>
+                <span class="text-gray-900">Publishers</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="w-64 flex-shrink-0">
+                <div class="bg-white rounded-lg shadow-md p-6 sticky top-8">
+                    <h3 class="font-semibold text-gray-900 mb-4">Wiki Sections</h3>
+                    <nav class="space-y-2">
+                        <a href="introduction.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">1. Introduction</a>
+                        <a href="libraries-archives.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">2. Libraries & Archives</a>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 pl-3 py-2">
+                            <span class="text-blue-700 font-medium">3. Publishers</span>
+                        </div>
+                        <a href="scholarship.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">4. Scholarship</a>
+                        <a href="book-compendium.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">5. Book Compendium</a>
+                        <a href="building-library.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">6. Building Your Library</a>
+                        <a href="conclusion.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">7. Conclusion</a>
+                    </nav>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-2">On This Page</h4>
+                        <nav class="space-y-1 text-sm">
+                            <a href="#specialist-publishers" class="block text-gray-600 hover:text-blue-600">Specialist Publishers</a>
+                            <a href="#academic-presses" class="block text-gray-600 hover:text-blue-600">Academic Presses</a>
+                            <a href="#online-platforms" class="block text-gray-600 hover:text-blue-600">Online Platforms</a>
+                            <a href="#publisher-table" class="block text-gray-600 hover:text-blue-600">Publisher Table</a>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="flex-1">
+                <article class="bg-white rounded-lg shadow-md p-8 prose max-w-none">
+                    <h2>3. Leading Publishers and Purveyors of Martial Arts Texts</h2>
+                    
+                    <h3>The Role of Specialist Publishers</h3>
+                    <p>The dissemination of martial arts knowledge through literature owes a great deal to specialist publishers. These entities have often dedicated their efforts to producing and distributing texts that range from translations of ancient classics and foundational works by martial arts masters to contemporary instructional manuals and rigorous scholarly research. Their commitment has been crucial in making a diverse array of martial arts information accessible to a global audience, catering to practitioners, historians, and researchers alike.</p>
+                    
+                    <h3 id="specialist-publishers">Key Specialist Martial Arts Publishers</h3>
+                    <p>A number of publishers have distinguished themselves through their focus on martial arts literature:</p>
+                    
+                    <p><strong>Turtle Press:</strong> Recognized as a leading producer of books, e-books, videos, and training resources for martial arts students, instructors, law enforcement personnel, and individuals interested in self-defense. Their catalog, visible on platforms like Amazon and Thriftbooks, features a variety of instructional titles. Examples include Complete Taekwondo Poomsae by Kyu Hyung Lee, Ultimate Flexibility by Sang H. Kim, Vital Point Strikes: The Art & Science of Striking Vital Targets for Self-defense and Combat Sports by Sang H. Kim, and an English edition of the Muye Dobo Tongji by Duk-Moo Yi. Turtle Press primarily focuses on practical instructional material across numerous martial arts, often authored by contemporary masters and experts.</p>
+                    
+                    <p><strong>Via Media Publishing:</strong> This publisher gained initial recognition for its quarterly Journal of Asian Martial Arts and has built a reputation for producing works that adhere to high academic standards while also catering to practical experience in martial traditions. Since ceasing publication of the journal in 2012, Via Media has focused on creating anthologies from its extensive archive of nearly 500 articles (61 to 67 anthologies mentioned). They have also published books by pioneering authors in Asian martial arts, such as Robert W. Smith (Martial Musings; Comprehensive Asian Martial Arts, co-authored with Donn Draeger), Oscar Ratti and Adele Westbrook (Tales of the Hermit, a three-volume graphic novel series; they are also known for Aikido and the Dynamic Sphere and Secrets of the Samurai, though Via Media's publication of these latter two is not explicitly stated), Jan Kauskas (Laoshi: Tai Chi, Teachers, and Pursuit of Principle), and publisher Michael DeMarco (Martial Art Essays from Beijing, 1780). Via Media plays a crucial role in bridging scholarly research with practitioner-focused content, particularly for in-depth studies of Asian martial traditions.</p>
+                    
+                    <p><strong>Shambhala Publications:</strong> Specializes in Asian martial arts literature, including samurai philosophy, practice manuals, biographies of historical and contemporary martial artists, and essays. Their extensive list covers disciplines such as Aikido, Budo, Judo, Karate, Kendo, Kyudo, Samurai traditions, Swordsmanship, T'ai Chi, and Qigong. Prominent authors and texts in their catalog include Morihei Ueshiba (The Art of Peace), Miyamoto Musashi (The Book of Five Rings, with translations by Thomas Cleary and William Scott Wilson), Yamamoto Tsunetomo (The Pocket Hagakure, translated by William Scott Wilson), and Waysun Liao (T'ai Chi Classics). Shambhala is a key source for English translations of classic East Asian philosophical and martial texts, often emphasizing the spiritual, cultural, and historical dimensions of these practices.</p>
+                    
+                    <p><strong>Kodansha International (and Kodansha USA):</strong> A major Japanese publisher with a significant international presence, Kodansha has been instrumental in bringing authoritative texts by foundational masters of Japanese martial arts to a global audience. Their martial arts catalog is extensive and includes seminal works such as Comprehensive Asian Fighting Arts by Donn F. Draeger and Robert W. Smith, Gichin Funakoshi's Karate-Do: My Way of Life and Karate-Do Kyohan, Serge Mol's Classical Weaponry of Japan, Jigoro Kano's Kodokan Judo, Masatoshi Nakayama's Best Karate Series, and numerous Aikido books by Morihei Ueshiba and Kisshomaru Ueshiba.</p>
+                    
+                    <p><strong>Tuttle Publishing:</strong> A prolific publisher in the martial arts field, Tuttle offers a diverse catalog that includes classics, modern instructional guides, and historical works covering a wide array of Asian martial arts. Examples from their extensive list include the Bruce Lee Library series (edited by John Little, featuring Tao of Jeet Kune Do), Peter Urban's The Karate Dojo, Shoshin Nagamine's The Essence of Okinawan Karate-Do, Oscar Ratti and Adele Westbrook's Secrets of the Samurai and Aikido and the Dynamic Sphere, Robin Rielly's Karate Basics, and Kazumi Tabata's Secret Tactics. Tuttle's offerings cater to both practitioners seeking technical instruction and readers interested in the cultural and historical aspects of martial arts.</p>
+                    
+                    <p><strong>Unique Publications:</strong> Known for publishing specific and often niche martial arts titles. Their works include The Secret History of the Sword by J. Christoph Amberger and Ninjutsu: History and Tradition by Masaaki Hatsumi.</p>
+                    
+                    <p><strong>Ohara Publications:</strong> Historically significant for publishing early and influential works, particularly by Bruce Lee, including The Tao of Jeet Kune Do (original edition). They also published Okinawan Goju-ryu by Seikichi Toguchi and Classical Kata of Okinawan Karate by Pat McCarthy.</p>
+                    
+                    <p><strong>Paladin Press:</strong> This publisher often focused on practical combat, self-defense, and historical weaponry. They reissued W.E. Fairbairn's World War II combatives manual Get Tough! and published the English translation of the Codex Wallerstein by Grzegorz Zabinski and Bartlomiej Walczak.</p>
+                    
+                    <p><strong>Black Belt Communications:</strong> The publishing arm associated with Black Belt Magazine, a long-standing name in martial arts media. They have extended their reach into book publishing, with titles such as the expanded edition of Bruce Lee's Tao of Jeet Kune Do and Lee's earlier work, Chinese Gung Fu: The Philosophical Art of Self-Defense.</p>
+                    
+                    <h3 id="academic-presses">Academic Presses with Martial Arts Publications</h3>
+                    <p>University presses and academic publishers contribute significantly to the scholarly study of martial arts by releasing rigorously researched monographs, historical analyses, and critical reference works.</p>
+                    
+                    <p><strong>Yale University Press:</strong> Published Sydney Anglo's The Martial Arts of Renaissance Europe, a significant scholarly work on HEMA.</p>
+                    
+                    <p><strong>Stanford University Press:</strong> Published Anders Engberg-Pedersen's Martial Aesthetics: How War Became an Art Form (2023), an academic study examining the aestheticization of warfare and its historical development.</p>
+                    
+                    <p><strong>Oxford University Press:</strong> Published an edition of Vegetius' Epitoma rei militaris, edited by M.D. Reeve, a foundational text on Roman military training and tactics.</p>
+                    
+                    <p><strong>ABC-CLIO:</strong> Publisher of the comprehensive two-volume reference work, Martial Arts of the World: An Encyclopedia, edited by Thomas A. Green (with Joseph R. Svinth also credited in some sources).</p>
+                    
+                    <h3 id="online-platforms">Notable Online Bookstores and Platforms (as Purveyors)</h3>
+                    <p>Large online retailers and specialized platforms provide broad access to martial arts literature from nearly all publishers, offering new, used, and e-book formats.</p>
+                    
+                    <p><strong>Amazon:</strong> A dominant online retailer stocking an unparalleled number of martial arts books. Numerous research snippets confirm the availability of titles from publishers like Turtle Press, Kodansha, Shambhala, Tuttle Publishing, and many others.</p>
+                    
+                    <p><strong>Better World Books:</strong> An online retailer offering both new and used books, including a selection of martial arts titles such as Peter Urban's The Karate Dojo.</p>
+                    
+                    <p><strong>Barnes & Noble:</strong> A major book retailer with a significant online presence, stocking a wide range of martial arts books. Examples include Shambhala's edition of The Book of Five Rings, Black Belt Communications' editions of Bruce Lee's Tao of Jeet Kune Do and Chinese Gung Fu, and Shambhala's T'ai Chi Classics.</p>
+                    
+                    <p><strong>AbeBooks:</strong> An online marketplace specializing in new, used, rare, and out-of-print books. It is a valuable resource for locating older or less common martial arts publications.</p>
+                    
+                    <p><strong>ThriftBooks:</strong> An online retailer focused on used books, where titles from publishers like Turtle Press can be found.</p>
+                    
+                    <h3 id="publisher-table">Major Publishers of Martial Arts Literature</h3>
+                    <div class="overflow-x-auto">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Publisher Name</th>
+                                    <th>Specialization/Focus</th>
+                                    <th>Key Authors/Series Examples</th>
+                                    <th>Website/Typical Retail Platform(s)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Turtle Press</td>
+                                    <td>Practical Instructional (Taekwondo, Flexibility, Vital Points, Self-Defense)</td>
+                                    <td>Sang H. Kim, Kyu Hyung Lee, Duk-Moo Yi (Muye Dobo Tongji)</td>
+                                    <td>turtlepress.com, Amazon</td>
+                                </tr>
+                                <tr>
+                                    <td>Via Media Publishing</td>
+                                    <td>Scholarly Asian Martial Traditions, Journal of Asian Martial Arts Anthologies</td>
+                                    <td>Robert W. Smith, Donn Draeger, Oscar Ratti & Adele Westbrook, Michael DeMarco</td>
+                                    <td>viamediapublishing.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Shambhala Publications</td>
+                                    <td>Eastern Philosophy, Asian Martial Arts Classics (Aikido, Budo, Samurai, T'ai Chi)</td>
+                                    <td>Morihei Ueshiba, Miyamoto Musashi (trans. Cleary, Wilson), Yamamoto Tsunetomo (trans. Wilson), Waysun Liao</td>
+                                    <td>shambhala.com, Amazon</td>
+                                </tr>
+                                <tr>
+                                    <td>Kodansha International/USA</td>
+                                    <td>Authoritative Japanese Martial Arts (Karate, Judo, Aikido, Kendo, Classical Weapons)</td>
+                                    <td>Gichin Funakoshi, Jigoro Kano, Masatoshi Nakayama, Morihei Ueshiba, Donn Draeger, Serge Mol</td>
+                                    <td>kodansha.com, Amazon, Penguin Random House</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuttle Publishing</td>
+                                    <td>Diverse Asian Martial Arts (Instructional, Historical, Philosophical, Classics)</td>
+                                    <td>Bruce Lee (Library ed. Little), Peter Urban, Shoshin Nagamine, Ratti & Westbrook, Robin Rielly, Kazumi Tabata</td>
+                                    <td>tuttlepublishing.com, Amazon</td>
+                                </tr>
+                                <tr>
+                                    <td>Unique Publications</td>
+                                    <td>Niche Martial Arts Titles (Ninjutsu, Historical Swordsmanship)</td>
+                                    <td>J. Christoph Amberger, Masaaki Hatsumi</td>
+                                    <td>Amazon, AbeBooks (often older titles)</td>
+                                </tr>
+                                <tr>
+                                    <td>Ohara Publications</td>
+                                    <td>Historically Significant Martial Arts (Bruce Lee, Okinawan Karate)</td>
+                                    <td>Bruce Lee, Seikichi Toguchi, Pat McCarthy</td>
+                                    <td>Amazon, AbeBooks (often older titles)</td>
+                                </tr>
+                                <tr>
+                                    <td>Paladin Press</td>
+                                    <td>Practical Combat, Self-Defense, Historical Weaponry</td>
+                                    <td>W.E. Fairbairn, Grzegorz Zabinski (trans. Codex Wallerstein)</td>
+                                    <td>Amazon, AbeBooks (often older titles)</td>
+                                </tr>
+                                <tr>
+                                    <td>Black Belt Communications</td>
+                                    <td>Bruce Lee Works, Content related to Black Belt Magazine</td>
+                                    <td>Bruce Lee</td>
+                                    <td>Amazon, Barnes & Noble</td>
+                                </tr>
+                                <tr>
+                                    <td>Yale University Press</td>
+                                    <td>Scholarly HEMA, European Military History</td>
+                                    <td>Sydney Anglo</td>
+                                    <td>yalepress.yale.edu, Amazon</td>
+                                </tr>
+                                <tr>
+                                    <td>Stanford University Press</td>
+                                    <td>Academic Cultural Studies, Martial Aesthetics</td>
+                                    <td>Anders Engberg-Pedersen</td>
+                                    <td>sup.org, Amazon</td>
+                                </tr>
+                                <tr>
+                                    <td>Oxford University Press</td>
+                                    <td>Classical Texts, Military History</td>
+                                    <td>Vegetius (ed. Reeve)</td>
+                                    <td>global.oup.com, Amazon</td>
+                                </tr>
+                                <tr>
+                                    <td>ABC-CLIO</td>
+                                    <td>Academic Reference, Encyclopedias</td>
+                                    <td>Thomas A. Green (ed. Martial Arts of the World)</td>
+                                    <td>abc-clio.com, Amazon</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <!-- Navigation between sections -->
+                <div class="mt-8 flex justify-between items-center">
+                    <a href="libraries-archives.html" class="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                        ← Libraries & Archives
+                    </a>
+                    <a href="scholarship.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        Next: Scholarship →
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-sm text-gray-500">
+                <p>© 2025 Jon Constantine. All rights reserved for the original text.</p>
+                <p>Website generated by an AI Assistant.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
