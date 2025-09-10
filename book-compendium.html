@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Compendium - Martial Arts Literature Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth;
+        }
+        .prose table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .prose th, .prose td { 
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 0.75rem;
+            text-align: left; 
+            font-size: 0.9em;
+        }
+        .prose th { 
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 { 
+            margin-top: 1.5em; 
+            margin-bottom: 0.75em; 
+            line-height: 1.3;
+        }
+        .prose h1 { font-size: 2.25rem; }
+        .prose h2 { font-size: 1.875rem; }
+        .prose h3 { font-size: 1.5rem; font-weight: 600; color: #374151; }
+        .prose h4 { font-size: 1.25rem; font-weight: 600; color: #4b5563; }
+        .prose h5 { font-size: 1.125rem; font-weight: 600; color: #6b7280; }
+        .prose h6 { font-size: 1rem; font-weight: 600; color: #6b7280; }
+        .prose p { 
+            margin-bottom: 1em; 
+            line-height: 1.7; 
+        }
+        .prose ul { 
+            list-style-type: disc; 
+            margin-left: 1.5em; 
+            margin-bottom: 1em; 
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            transform: translateX(4px);
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Book Compendium</h1>
+                    <p class="text-gray-600">A Curated Collection of Essential Martial Arts Works</p>
+                </div>
+                <a href="wiki.html" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    ← Back to Wiki
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation breadcrumb -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex items-center space-x-2 text-sm text-gray-500">
+                <a href="wiki.html" class="text-blue-600 hover:text-blue-800">Wiki Home</a>
+                <span>→</span>
+                <span class="text-gray-900">Book Compendium</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="w-64 flex-shrink-0">
+                <div class="bg-white rounded-lg shadow-md p-6 sticky top-8">
+                    <h3 class="font-semibold text-gray-900 mb-4">Wiki Sections</h3>
+                    <nav class="space-y-2">
+                        <a href="introduction.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">1. Introduction</a>
+                        <a href="libraries-archives.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">2. Libraries & Archives</a>
+                        <a href="publishers.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">3. Publishers</a>
+                        <a href="scholarship.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">4. Scholarship</a>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 pl-3 py-2">
+                            <span class="text-blue-700 font-medium">5. Book Compendium</span>
+                        </div>
+                        <a href="building-library.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">6. Building Your Library</a>
+                        <a href="conclusion.html" class="nav-link block pl-3 py-2 text-gray-600 hover:text-blue-600">7. Conclusion</a>
+                    </nav>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <h4 class="font-medium text-gray-900 mb-2">On This Page</h4>
+                        <nav class="space-y-1 text-sm">
+                            <a href="#methodology" class="block text-gray-600 hover:text-blue-600">Selection Methodology</a>
+                            <a href="#historical-treatises" class="block text-gray-600 hover:text-blue-600">Historical Treatises</a>
+                            <a href="#master-works" class="block text-gray-600 hover:text-blue-600">Works by Masters</a>
+                            <a href="#scholarly-works" class="block text-gray-600 hover:text-blue-600">Modern Scholarly Works</a>
+                            <a href="#instructional-texts" class="block text-gray-600 hover:text-blue-600">Instructional Texts</a>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="flex-1">
+                <article class="bg-white rounded-lg shadow-md p-8 prose max-w-none">
+                    <h2>5. A Curated Compendium of Known Martial Arts Books</h2>
+                    
+                    <h3 id="methodology">Methodology for Selection</h3>
+                    <p>This compendium presents a curated list of known martial arts books, aiming for breadth and significance. The selection prioritizes works that are historically important, authored by foundational masters or leading scholars, represent key research, or are widely recognized as essential texts within specific martial traditions. The information is drawn from the entirety of the reviewed research material. While the user's query mentioned "all known books," such an exhaustive list is impractical due to the sheer volume of martial arts literature. Therefore, this section focuses on providing a robust, representative, and high-value selection. ISBNs are included where available from the source materials to aid in locating specific editions.</p>
+                    
+                    <p>A comprehensive understanding of any martial art often benefits from engaging with three broad categories of literature: primary historical documents that offer direct insight into original techniques and philosophies; the codified teachings and autobiographical reflections of art founders and key modern masters; and contemporary scholarly analyses or encyclopedic overviews that contextualize and synthesize this knowledge. This compendium is structured to reflect these categories, guiding the reader toward a balanced collection. Certain texts, due to their historical impact, the authority of their authors, or their comprehensive nature, have achieved a "classic" or "canonical" status within martial arts literature. Their frequent appearance across diverse bibliographies and recommendations underscores their widely accepted value, making them essential starting points for serious study.</p>
+                    
+                    <h3 id="historical-treatises">I. Historical Treatises and Manuals (Primary Sources & Translations)</h3>
+                    
+                    <h4>A. Eastern Traditions</h4>
+                    
+                    <h5>Chinese:</h5>
+                    <p>The preservation and translation of historical Chinese martial arts manuals provide invaluable insights into the evolution of these complex systems.</p>
+                    
+                    <p><strong>Works from the Shaolin Kung Fu Online Library:</strong> This specialized library offers translations of numerous early to mid-20th-century Chinese texts.</p>
+                    <ul>
+                        <li>Authentic Shaolin Heritage: Training Methods of 72 Arts of Shaolin by Jin Jing Zhong (Original 1934, Tanjin). Focuses on diverse Shaolin training methodologies.</li>
+                        <li>Authentic Shaolin Heritage: Dian Xue Shu (Dim Mak): Skill of Acting on Acupoints by Jin Jing Zhong (Original 1934, Tanjin). Details pressure point striking techniques.</li>
+                        <li>Shaolin Chin Na Fa: Art of Seizing and Grappling. Instructor's Manual for Police Academy of Zhejiang Province by Liu Jin Sheng (Original 1936, Shanghai). Covers Chin Na (joint locking and grappling).</li>
+                        <li>Lian Gong Mi Jue: Secret Methods Of Acquiring External And Internal Mastery by Jin Yi Ming, Guo Cui Ya (Original 1930, Shanghai). Discusses internal and external training methods.</li>
+                        <li>Southern Shaolin Hung Gar Kung Fu Classics Series by Lam Sai Wing (Original 1957, Hong Kong): Includes Iron Thread, Gung Gee Fook Fu Kuen, and Fu Hok Seung Ying Kuen, all foundational texts for Hung Gar.</li>
+                        <li>Chuan Na Quan. Style of Piercing Blows and Holds by Xu Yi Qian (Original 1936, Shanghai).</li>
+                    </ul>
+                    
+                    <p><strong>Manuals from ChineseLongSword.com:</strong> This site offers translations and interpretations of older Ming Dynasty manuals.</p>
+                    <ul>
+                        <li>《單刀法選》 (Dan Dao Fa Xuan) (Chinese Long Saber) by 程宗猷 (Cheng Zong You) (Ming Dynasty, 1621). A key text on Chinese long saber techniques, influenced by Japanese swordsmanship encountered during conflicts with pirates.</li>
+                        <li>《武備志 • 劍》 (Jian) (Long Straight Sword) from 《武備志》 (Wu Bei Zhi) by Mao Yuan-Yi (c. 17th century). Contains techniques for the two-handed straight sword (Jian).</li>
+                        <li>《長鎗法選》 (Chang Qiang Fa Xuan) (Chinese Long Spear) by 程宗猷 (Cheng Zong You) (Ming Dynasty). Details principles and partnered drills for the long spear.</li>
+                        <li>《劍經》 (Jian Jing) (Sword Treatise) by 俞大猷 (Yu Da-You) (Ming Dynasty). A treatise on sword strategy by a famed general with Shaolin connections.</li>
+                        <li>《少林棍法闡宗》 (Shaolin Gunfa Canzong) (Shaolin Staff) by 程宗猷 (Cheng Zong You) (Ming Dynasty, 1616). An extensive manual on Shaolin staff techniques.</li>
+                    </ul>
+                    
+                    <h5>Classical Strategy:</h5>
+                    <p><strong>The Art of War by Sun Tzu</strong> (Ancient China, c. 5th century BC). A foundational text on military strategy with profound implications for martial philosophy and conflict resolution. Numerous translations exist, including those by Lionel Giles (1910, Luzac and Company), Samuel B. Griffith (1963, Oxford University Press), and Thomas Cleary (1988, Shambhala Dragon Editions).</p>
+                    
+                    <h5>Japanese/Okinawan:</h5>
+                    <p>These texts are cornerstones for understanding the development of many Japanese and Okinawan martial arts.</p>
+                    
+                    <p><strong>Bubishi (The Bible of Karate)</strong> (Author unknown, various historical versions). An eclectic collection of texts on Southern Chinese martial arts, medicine, and philosophy, profoundly influential in the development of Okinawan karate. Patrick McCarthy's translation and commentary (Tuttle Publishing, 1995) is a widely referenced edition.</p>
+                    
+                    <p><strong>A Book of Five Rings (Go Rin No Sho) by Miyamoto Musashi</strong> (c. 1645). A classic work on kenjutsu (sword strategy), philosophy, and the mindset of a warrior, written by Japan's most famous swordsman. Notable translations include those by Victor Harris (1974, The Overlook Press), Thomas Cleary (Shambhala Publications), and William Scott Wilson (Kodansha/Shambhala).</p>
+                    
+                    <p><strong>Hagakure: The Book of the Samurai by Yamamoto Tsunetomo</strong> (Compiled early 18th century). A collection of aphorisms and reflections on Bushido, the way of the samurai. William Scott Wilson's translation (Kodansha USA, 2002) is widely read. ISBN: 978-4770029164.</p>
+                    
+                    <p><strong>Muye Dobo Tongji (Complete Illustrated Manual of Martial Arts)</strong> by Yi Deokmu, Pak Jega, Baek Dongsu (Joseon Dynasty, Korea, 1790). A comprehensive illustrated manual of Korean martial arts of the period. An English edition by Duk-Moo Yi is published by Turtle Press.</p>
+                    
+                    <h4>B. European Traditions (HEMA)</h4>
+                    <p>The study of Historical European Martial Arts relies heavily on the interpretation of surviving fight books (Fechtbücher) and treatises. Wiktenauer is a primary digital repository for many of these.</p>
+                    <ul>
+                        <li><strong>Royal Armouries Ms. I.33 (Walpurgis Manuscript / Tower Fechtbuch)</strong> (c. 1300, German). The oldest known extant European fencing manual, detailing sword and buckler combat.</li>
+                        <li><strong>Flos Duellatorum (Fior di Battaglia / Flower of Battle) by Fiore dei Liberi</strong> (c. 1409, Italian). A comprehensive treatise covering grappling, dagger, single-handed sword, longsword, polearms, and armored combat. Various manuscript versions exist, with modern translations and interpretations by scholars like Bob Charron.</li>
+                        <li><strong>Fechtbücher of Hans Talhoffer</strong> (mid-15th century, German). A series of influential illustrated manuscripts covering judicial duels, armored and unarmored combat with various weapons.</li>
+                        <li><strong>Codex Wallerstein (Vom Baumans Fechtbuch)</strong> (late 14th/early 15th century, German). Features techniques for longsword, falchion, dagger, and wrestling. A notable English translation is by Grzegorz Zabinski and Bartlomiej Walczak (Paladin Press, 2002). ISBN: 978-1581603392.</li>
+                        <li><strong>Teachings of Johannes Liechtenauer</strong> (late 14th century, German). The foundational teachings of the German school of swordsmanship, primarily preserved through the rhyming verses (Zettel) and extensive glosses (commentaries) by his students and later masters such as Sigmund Ringeck, Peter von Danzig, and Paulus Kal. Modern compilations and translations are available from HEMA scholars like Christian Henry Tobler and Michael Chidester.</li>
+                        <li><strong>Paradoxes of Defence by George Silver</strong> (1599, English). An important English fencing manual arguing for the efficacy of traditional English short sword techniques against the then-fashionable Italian rapier methods.</li>
+                    </ul>
+                    
+                    <h3 id="master-works">II. Seminal Works by Key Authors and Modern Masters</h3>
+                    <p>These works represent the codified teachings, philosophies, and autobiographical insights of founders and highly influential figures in modern martial arts.</p>
+                    
+                    <h4>Gichin Funakoshi (Founder of Shotokan Karate):</h4>
+                    <ul>
+                        <li>Karate-Do: My Way of Life (Kodansha International, First English Ed. 1975, based on 1956 Japanese original; 1981 paperback). An autobiography detailing Funakoshi's life and the philosophy of Karate-do. ISBN: 978-0870114632.</li>
+                        <li>Karate-Do Kyohan: The Master Text (Kodansha International, First English Ed. 1973, based on earlier Japanese editions, revised by Funakoshi before his death in 1957). Translated by Tsutomu Ohshima. The definitive technical manual for Shotokan Karate, presenting nineteen kata. ISBN: 978-0870111907.</li>
+                        <li>The Twenty Guiding Principles of Karate: The Spiritual Legacy of the Master (Kodansha, 1975, English translation 2003 by John Teramoto). Funakoshi's core ethical precepts.</li>
+                    </ul>
+                    
+                    <h4>Bruce Lee (Founder of Jeet Kune Do):</h4>
+                    <ul>
+                        <li>Tao of Jeet Kune Do (Ohara Publications, 1975; New Expanded Edition, Black Belt Communications, 2011). Compiled from Lee's notes, outlining the philosophy and concepts of Jeet Kune Do. ISBN (Expanded Ed): 978-0897502023.</li>
+                        <li>Bruce Lee's Fighting Method (Series, Vol. 1-4) (Ohara Publications, later Black Belt Communications). Details the technical aspects of Jeet Kune Do.</li>
+                        <li>Chinese Gung Fu: The Philosophical Art of Self-Defense (Self-published 1963; Revised and Updated Edition, Black Belt Communications, 1987). Lee's first book, reflecting his early thoughts on martial arts, heavily based on Wing Chun. ISBN (1987 Ed): 978-0897501125.</li>
+                        <li>Bruce Lee Library (7-volume collection, edited by John Little, Tuttle Publishing, 1997). A comprehensive collection of Lee's writings, letters, and notes.</li>
+                    </ul>
+                    
+                    <h4>Donn F. Draeger (Pioneering Western Martial Arts Historian and Practitioner):</h4>
+                    <ul>
+                        <li>Comprehensive Asian Fighting Arts (with Robert W. Smith) (Kodansha International, 1969; re-titled and reprinted 1980/1981). An encyclopedic overview of numerous Asian martial arts. ISBN (1981 Ed): 978-0870114366.</li>
+                        <li>Classical Bujutsu: The Martial Arts and Ways of Japan, Vol I (Weatherhill, 1973; Shambhala Publications reprint 2007). Focuses on ancient Japanese warrior combat systems (pre-Tokugawa). ISBN (Weatherhill Ed): 978-0834802339.</li>
+                        <li>Classical Budo: Martial Arts And Ways Of Japan, Vol II (Weatherhill, 1973; Shambhala Publications reprint 1990). Details the development of martial ways (do forms) with spiritual and disciplinary goals. ISBN (Weatherhill Ed): 978-0834802346.</li>
+                        <li>Modern Bujutsu & Budo: Martial Arts And Ways Of Japan, Vol III (Weatherhill, 1974; Tuttle Publishing reprint 1975). Covers developments from the Meiji Restoration onwards. ISBN (Weatherhill Ed): 978-0834800991.</li>
+                    </ul>
+                    
+                    <h3 id="scholarly-works">III. Modern Scholarly Works, Encyclopedias, and Histories</h3>
+                    <p>These works provide academic context, historical analysis, and comprehensive overviews of martial arts.</p>
+                    <ul>
+                        <li><strong>Martial Arts of the World: An Encyclopedia of History and Innovation (2 volumes)</strong> edited by Thomas A. Green & Joseph R. Svinth (ABC-CLIO, 1st ed. 2001; 2nd ed. 2010). A comprehensive scholarly encyclopedia with contributions from numerous experts. ISBN (2010 ed.): 978-1598842432.</li>
+                        <li><strong>Koryu Bujutsu: Classical Warrior Traditions of Japan</strong> edited by Diane Skoss (Koryu Books, 1997). A collection of essays by leading Western practitioners and scholars of classical Japanese martial arts. ISBN: 1-890536-04-0.</li>
+                        <li><strong>The History of Karate and the Masters Who Made It: Development, Lineages, and Philosophies of Traditional Okinawan and Japanese Karate-Do</strong> by Mark I. Cramer (North Atlantic Books, 2018).</li>
+                        <li><strong>Shotokan Karate: Its History and Evolution</strong> by Randall G. Hassell (Empire Books, 1st ed. 1984, revised 1998, updated 2007). A comprehensive history of the Shotokan style. ISBN (2007 ed.): 978-1933901282.</li>
+                        <li><strong>Martial Aesthetics: How War Became an Art Form</strong> by Anders Engberg-Pedersen (Stanford University Press, 2023). An academic study on the aestheticization of warfare and its historical development. ISBN: 978-0804799942.</li>
+                        <li><strong>The Martial Arts of Renaissance Europe</strong> by Sydney Anglo (Yale University Press, 2000). A detailed scholarly examination of HEMA.</li>
+                    </ul>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
+                        <p class="text-blue-800 text-sm mb-0"><strong>Note:</strong> This page contains a condensed overview of the book compendium. For the complete detailed listings including all instructional texts by martial art, historical tables, and comprehensive bibliographic information, please refer to the <a href="index.html" class="text-blue-600 hover:underline">original comprehensive guide</a>.</p>
+                    </div>
+                </article>
+
+                <!-- Navigation between sections -->
+                <div class="mt-8 flex justify-between items-center">
+                    <a href="scholarship.html" class="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                        ← Scholarship
+                    </a>
+                    <a href="building-library.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        Next: Building Your Library →
+                    </a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-sm text-gray-500">
+                <p>© 2025 Jon Constantine. All rights reserved for the original text.</p>
+                <p>Website generated by an AI Assistant.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

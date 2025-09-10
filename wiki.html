@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martial Arts Literature Wiki - Jon Constantine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth;
+        }
+        .wiki-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .wiki-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">Martial Arts Literature Wiki</h1>
+                <p class="text-xl text-gray-600">A Comprehensive Guide to Martial Arts Libraries and Literature</p>
+                <p class="text-lg text-gray-500 mt-2">by Jon Constantine</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation breadcrumb -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex items-center space-x-2 text-sm text-gray-500">
+                <span class="text-blue-600 font-medium">Wiki Home</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Introduction -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Welcome to the Martial Arts Literature Wiki</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                This wiki provides a comprehensive guide to the world of martial arts literature, spanning from ancient treatises to modern scholarly works. 
+                Navigate through the sections below to explore libraries, publishers, academic resources, and curated book recommendations.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Whether you're a dedicated practitioner, serious researcher, or aspiring historian, this resource will help you build a foundational 
+                understanding of available literary resources in the martial arts.
+            </p>
+        </div>
+
+        <!-- Wiki Sections Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Section 1: Introduction -->
+            <a href="introduction.html" class="wiki-card bg-white rounded-lg shadow-md p-6 block hover:text-inherit">
+                <div class="flex items-start space-x-4">
+                    <div class="section-icon">1</div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Introduction</h3>
+                        <p class="text-gray-600 text-sm mb-3">The Enduring Legacy of Martial Arts Literature</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Role of Text in Martial Traditions</li>
+                            <li>• Scope and Objectives</li>
+                            <li>• Navigating Information Landscape</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Section 2: Libraries & Archives -->
+            <a href="libraries-archives.html" class="wiki-card bg-white rounded-lg shadow-md p-6 block hover:text-inherit">
+                <div class="flex items-start space-x-4">
+                    <div class="section-icon">2</div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Libraries & Archives</h3>
+                        <p class="text-gray-600 text-sm mb-3">Premier Collections and Digital Resources</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Institutional Libraries</li>
+                            <li>• Digital Archives (Wiktenauer, etc.)</li>
+                            <li>• Specialized Collections</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Section 3: Publishers -->
+            <a href="publishers.html" class="wiki-card bg-white rounded-lg shadow-md p-6 block hover:text-inherit">
+                <div class="flex items-start space-x-4">
+                    <div class="section-icon">3</div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Publishers</h3>
+                        <p class="text-gray-600 text-sm mb-3">Leading Publishers and Purveyors</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Specialist Publishers</li>
+                            <li>• Academic Presses</li>
+                            <li>• Online Bookstores</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Section 4: Scholarship -->
+            <a href="scholarship.html" class="wiki-card bg-white rounded-lg shadow-md p-6 block hover:text-inherit">
+                <div class="flex items-start space-x-4">
+                    <div class="section-icon">4</div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Scholarship</h3>
+                        <p class="text-gray-600 text-sm mb-3">Journals, Magazines, and Bibliographies</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Academic Journals</li>
+                            <li>• Historical Magazines</li>
+                            <li>• Key Bibliographies</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Section 5: Book Compendium -->
+            <a href="book-compendium.html" class="wiki-card bg-white rounded-lg shadow-md p-6 block hover:text-inherit">
+                <div class="flex items-start space-x-4">
+                    <div class="section-icon">5</div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Book Compendium</h3>
+                        <p class="text-gray-600 text-sm mb-3">Curated Collection of Essential Works</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Historical Treatises</li>
+                            <li>• Works by Masters</li>
+                            <li>• Modern Scholarly Works</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Section 6: Building Your Library -->
+            <a href="building-library.html" class="wiki-card bg-white rounded-lg shadow-md p-6 block hover:text-inherit">
+                <div class="flex items-start space-x-4">
+                    <div class="section-icon">6</div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Building Your Library</h3>
+                        <p class="text-gray-600 text-sm mb-3">Recommendations and Future Directions</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Strategic Approaches</li>
+                            <li>• Sourcing Texts</li>
+                            <li>• Digital Resources</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Section 7: Conclusion -->
+            <a href="conclusion.html" class="wiki-card bg-white rounded-lg shadow-md p-6 block hover:text-inherit">
+                <div class="flex items-start space-x-4">
+                    <div class="section-icon">7</div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Conclusion</h3>
+                        <p class="text-gray-600 text-sm mb-3">Summary and Future Directions</p>
+                        <ul class="text-xs text-gray-500 space-y-1">
+                            <li>• Key Findings</li>
+                            <li>• Access Trends</li>
+                            <li>• Building Collections</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Additional Resources -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Additional Resources</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">Quick Links</h3>
+                    <ul class="space-y-1 text-sm text-blue-600">
+                        <li><a href="index.html" class="hover:underline">← Back to Original Guide</a></li>
+                        <li><a href="martial_arts_industry_trends.html" class="hover:underline">Industry Trends & Analytics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900 mb-2">About This Wiki</h3>
+                    <p class="text-sm text-gray-600">
+                        This wiki organizes the comprehensive martial arts literature guide into manageable, interconnected sections for easier navigation and reference.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="text-center text-sm text-gray-500">
+                <p>© 2025 Jon Constantine. All rights reserved for the original text.</p>
+                <p>Website generated by an AI Assistant.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
