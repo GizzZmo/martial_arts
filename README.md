@@ -45,7 +45,7 @@ Open any of these files directly in your browser:
 
 | Goal | Open this file |
 |------|----------------|
-| Find digital archives for HEMA or Chinese manuals | [`libraries-archives.html`](libraries-archives.html) |
+| Find digital archives + direct primary-source links | [`libraries-archives.html`](libraries-archives.html) |
 | Discover specialist publishers | [`publishers.html`](publishers.html) |
 | Look up academic journals & bibliographies | [`scholarship.html`](scholarship.html) |
 | Browse curated essential books | [`book-compendium.html`](book-compendium.html) |
@@ -59,7 +59,7 @@ Open any of these files directly in your browser:
 → Start with [`book-compendium.html`](book-compendium.html) → filter by art (Karate, Judo, Aikido, HEMA, etc.) → note recommended editions and publishers → cross-check availability via the publishers section.
 
 **Historian / HEMA researcher looking for primary sources**  
-→ Go to [`libraries-archives.html`](libraries-archives.html) → focus on Wiktenauer, ChineseLongSword, Internet Archive, HROARR → then consult the historical treatises tables in the book compendium.
+→ Go to [`libraries-archives.html`](libraries-archives.html) → use the **Direct Download Links** section (Wiktenauer I.33, Silver *Paradoxes*, HROARR manuals, ChineseLongSword free scans, Internet Archive, etc.) → then consult the historical treatises tables in the book compendium.
 
 **Someone building a personal martial arts library**  
 → Read [`building-library.html`](building-library.html) for strategy → use the publishers and book compendium sections to prioritize purchases → check free digital resources (Wiktenauer, Project Gutenberg, Internet Archive) first.
@@ -86,7 +86,7 @@ npx serve .
 | Section | Description | File |
 |---------|-------------|------|
 | **Introduction** | The indispensable role of text in martial traditions | [introduction.html](introduction.html) |
-| **Libraries & Archives** | Institutional libraries, digital archives, and specialized collections (Wiktenauer, ChineseLongSword, Kodokan, Internet Archive, etc.) | [libraries-archives.html](libraries-archives.html) |
+| **Libraries & Archives** | Institutional libraries, digital archives, specialized collections, **and selected direct download links for primary sources** | [libraries-archives.html](libraries-archives.html) |
 | **Publishers** | Specialist and academic publishers of martial arts texts (Tuttle, Shambhala, Kodansha, Turtle Press, and more) | [publishers.html](publishers.html) |
 | **Scholarship** | Academic journals, magazines, and key bibliographies | [scholarship.html](scholarship.html) |
 | **Book Compendium** | Curated list of historical treatises, seminal works by masters, scholarly books, and instructional guides | [book-compendium.html](book-compendium.html) |
@@ -115,7 +115,7 @@ These are among the most valuable free or low-cost starting points for serious s
 | **[HROARR](https://hroarr.com)** | HEMA manuals & research downloads | Free |
 | **[Kodokan Judo Museum & Library](https://kdkjd.org/judo-museum-library/)** | Judo primary materials | Free online catalogs; closed-stack access on site |
 
-Full details, institutional libraries, and additional platforms are in [`libraries-archives.html`](libraries-archives.html).
+**Selected direct links** (I.33, Silver *Paradoxes of Defence*, HROARR manuals page, ChineseLongSword free library, Internet Archive search, etc.) are collected in the new **Direct Download Links** section of [`libraries-archives.html`](libraries-archives.html).
 
 ### Publishers
 Turtle Press · Via Media · Shambhala · Kodansha · Tuttle · and major academic presses
