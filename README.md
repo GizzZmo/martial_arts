@@ -1,6 +1,6 @@
 **Martial Arts**
 
-https://github.com/GizzZmo/martial_arts/blob/main/GeminiAPI-generated-5in1.png
+ <img width="1024" height="1024" alt="GeminiAPI-generated-5in1" src="https://github.com/user-attachments/assets/ecbc19a3-f363-495d-8b4a-c5bafb388b5a" />
 
   *The pursuit of knowledge in the martial arts is a journey enriched by its vast and varied literary landscape. This report has endeavored to map out the key resources available.*
 
