@@ -28,6 +28,59 @@ Or simply browse the live pages via the [GitHub repository](https://github.com/G
 
 ---
 
+## Usage Examples
+
+### 1. Browse the full guide offline
+```bash
+git clone https://github.com/GizzZmo/martial_arts.git
+cd martial_arts
+open index.html          # macOS
+# or
+xdg-open index.html      # Linux
+# or just double-click index.html on Windows
+```
+
+### 2. Jump straight to a specific section
+Open any of these files directly in your browser:
+
+| Goal | Open this file |
+|------|----------------|
+| Find digital archives for HEMA or Chinese manuals | [`libraries-archives.html`](libraries-archives.html) |
+| Discover specialist publishers | [`publishers.html`](publishers.html) |
+| Look up academic journals & bibliographies | [`scholarship.html`](scholarship.html) |
+| Browse curated essential books | [`book-compendium.html`](book-compendium.html) |
+| Get advice on building a personal collection | [`building-library.html`](building-library.html) |
+| Read the industry trends analysis | [`martial_arts_industry_trends.html`](martial_arts_industry_trends.html) |
+| Prefer a wiki-style layout | [`wiki.html`](wiki.html) |
+
+### 3. Typical research workflows
+
+**Practitioner wanting foundational texts for their art**  
+→ Start with [`book-compendium.html`](book-compendium.html) → filter by art (Karate, Judo, Aikido, HEMA, etc.) → note recommended editions and publishers → cross-check availability via the publishers section.
+
+**Historian / HEMA researcher looking for primary sources**  
+→ Go to [`libraries-archives.html`](libraries-archives.html) → focus on Wiktenauer, Royal Armouries Ms. I.33, Fiore, Liechtenauer tradition → then consult the historical treatises tables in the book compendium.
+
+**Someone building a personal martial arts library**  
+→ Read [`building-library.html`](building-library.html) for strategy → use the publishers and book compendium sections to prioritize purchases → check free digital resources (Project Gutenberg, Wiktenauer) first.
+
+**Academic writing a paper on martial arts literature**  
+→ Use [`scholarship.html`](scholarship.html) for journals and bibliographies → cite the curated lists and tables → explore the industry trends page for broader context.
+
+### 4. Serve it locally (optional)
+If you prefer a local web server (useful for relative links and testing):
+
+```bash
+# Python 3
+python -m http.server 8000
+# then visit http://localhost:8000
+
+# or with Node.js
+npx serve .
+```
+
+---
+
 ## What's Inside
 
 | Section | Description | File |
