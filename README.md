@@ -2,6 +2,9 @@
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![Latest Release](https://img.shields.io/github/v/release/GizzZmo/martial_arts)](https://github.com/GizzZmo/martial_arts/releases)
+[![CI](https://github.com/GizzZmo/martial_arts/actions/workflows/ci.yml/badge.svg)](https://github.com/GizzZmo/martial_arts/actions/workflows/ci.yml)
+[![Deploy](https://github.com/GizzZmo/martial_arts/actions/workflows/deploy.yml/badge.svg)](https://github.com/GizzZmo/martial_arts/actions/workflows/deploy.yml)
+[![Screenshots](https://github.com/GizzZmo/martial_arts/actions/workflows/screenshots.yml/badge.svg)](https://github.com/GizzZmo/martial_arts/actions/workflows/screenshots.yml)
 
 **A comprehensive guide to martial arts libraries, archives, publishers, journals, and essential books.**
 
@@ -24,7 +27,45 @@ cd martial_arts
 # then open index.html
 ```
 
-Or simply browse the live pages via the [GitHub repository](https://github.com/GizzZmo/martial_arts).
+Or browse the [GitHub repository](https://github.com/GizzZmo/martial_arts). After enabling GitHub Pages (see below), the live site will be at:
+
+**https://gizzzmo.github.io/martial_arts/**
+
+---
+
+## Deployment (GitHub Pages)
+
+Deployment is automated via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+### One-time setup
+1. Open **Settings → Pages**
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+3. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually under the Actions tab)
+
+The workflow packages all `*.html` pages plus root images / optional asset folders into a Pages artifact and deploys it. Relative links between pages continue to work under the `/martial_arts/` path prefix.
+
+### Manual / offline package
+Every CI run also uploads a **martial-arts-site** artifact (zip + tar.gz) you can download from the Actions run page for mirrors or local hosting.
+
+---
+
+## CI, assets, artifacts & screenshots
+
+| Workflow | Trigger | What it does |
+|----------|---------|----------------|
+| **[CI](.github/workflows/ci.yml)** | push / PR to `main` | Validates required pages, HTML sanity checks, inventory of image assets, relative-link warnings; packages site as downloadable artifact |
+| **[Deploy](.github/workflows/deploy.yml)** | push to `main` / manual | Builds static package → GitHub Pages |
+| **[Screenshots](.github/workflows/screenshots.yml)** | HTML changes, weekly cron, manual | Serves site locally, captures desktop + mobile full-page PNGs with Playwright, uploads **page-screenshots** artifact |
+
+Screenshot script: [`scripts/screenshots.mjs`](scripts/screenshots.mjs).
+
+Local regeneration (optional):
+
+```bash
+python3 -m http.server 8080 &
+# in another shell, after npm install playwright && npx playwright install chromium
+BASE_URL=http://127.0.0.1:8080 node scripts/screenshots.mjs
+```
 
 ---
 
@@ -68,8 +109,6 @@ Open any of these files directly in your browser:
 → Use [`scholarship.html`](scholarship.html) for journals and bibliographies → cite the curated lists and tables → explore the industry trends page for broader context.
 
 ### 4. Serve it locally (optional)
-If you prefer a local web server (useful for relative links and testing):
-
 ```bash
 # Python 3
 python -m http.server 8000
@@ -103,8 +142,6 @@ The main entry point [`index.html`](index.html) contains the full report with na
 
 ### Digital Archives & Primary Sources (highlighted)
 
-These are among the most valuable free or low-cost starting points for serious study:
-
 | Resource | Focus | Access |
 |----------|-------|--------|
 | **[Wiktenauer](https://wiktenauer.com)** | HEMA fencing manuals & wrestling treatises (Liechtenauer, Fiore, Talhoffer, I.33, etc.) | Free scans, transcriptions, many translations |
@@ -115,7 +152,7 @@ These are among the most valuable free or low-cost starting points for serious s
 | **[HROARR](https://hroarr.com)** | HEMA manuals & research downloads | Free |
 | **[Kodokan Judo Museum & Library](https://kdkjd.org/judo-museum-library/)** | Judo primary materials | Free online catalogs; closed-stack access on site |
 
-**Selected direct links** (I.33, Silver *Paradoxes of Defence*, HROARR manuals page, ChineseLongSword free library, Internet Archive search, etc.) are collected in the new **Direct Download Links** section of [`libraries-archives.html`](libraries-archives.html).
+**Selected direct links** are in the **Direct Download Links** section of [`libraries-archives.html`](libraries-archives.html).
 
 ### Publishers
 Turtle Press · Via Media · Shambhala · Kodansha · Tuttle · and major academic presses
@@ -124,6 +161,30 @@ Turtle Press · Via Media · Shambhala · Kodansha · Tuttle · and major academ
 - Classical treatises (*Bubishi*, *Go Rin No Sho*, *Hagakure*, Liechtenauer tradition, Fiore dei Liberi…)
 - Foundational works by Funakoshi, Kano, Ueshiba, Bruce Lee, Donn Draeger, and others
 - Scholarly encyclopedias and modern research
+
+---
+
+## Suggested improvements (roadmap)
+
+### Content
+1. **Sync `index.html` with section pages** — `libraries-archives.html` is ahead of the monolithic `index.html` (e.g. Internet Archive, HROARR, direct download links). Either generate section pages from a single source or periodically diff-merge.
+2. **Link health checks in CI** — expand the current relative-link checker with scheduled external URL probing (soft-fail / report-only) for Wiktenauer, IA, publishers, etc.
+3. **Structured data** — optional JSON/YAML catalog of books & archives for search, filtering, and future API-ish use.
+4. **More primary-source deep links** — Capo Ferro, Mair, Ringeck/Danzig glosses, official federation manuals (AJKF, Kukkiwon catalogs).
+5. **Translations / i18n** — at least Norwegian or bilingual summaries for accessibility to non-English readers.
+
+### UX / design
+6. **Shared layout component** — extract common header/nav/footer into a small build step (11ty, Nunjucks, or simple includes) so wiki + section pages stay consistent.
+7. **Search** — client-side search (Pagefind / Lunr) over the static HTML.
+8. **Dark mode** and stronger mobile table UX (card layout for narrow screens).
+9. **Move banner image** into `assets/` and compress / provide WebP + fallback.
+10. **Pin Tailwind** — replace CDN Tailwind with a built CSS file for offline reliability and reproducibility.
+
+### Ops
+11. **GitHub Pages custom domain** (optional) once the default `*.github.io/martial_arts/` URL is verified.
+12. **Release workflow** — on tag `v*`, attach the site zip/tar from CI as release assets.
+13. **Dependabot** for Actions versions only (no app deps required yet).
+14. **CODE_OF_CONDUCT.md** — referenced by CONTRIBUTING but not present yet.
 
 ---
 
