@@ -1,4 +1,5 @@
 **Martial Arts**
+Download repositorie, unzip and open index.html in a browser. >>
 
  <img width="1024" height="1024" alt="GeminiAPI-generated-5in1" src="https://github.com/user-attachments/assets/ecbc19a3-f363-495d-8b4a-c5bafb388b5a" />
 
