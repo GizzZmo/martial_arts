@@ -1,0 +1,22 @@
+# Local / CI artifacts
+_site/
+artifacts/
+screenshots/
+playwright-report/
+test-results/
+
+# Node (screenshot workflow installs locally in CI; avoid committing)
+node_modules/
+package-lock.json
+package.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Env
+.env
+.env.*
