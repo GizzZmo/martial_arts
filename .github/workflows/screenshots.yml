@@ -1,0 +1,94 @@
+name: Screenshots
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'images/**'
+      - '.github/workflows/screenshots.yml'
+      - 'scripts/screenshots.mjs'
+  pull_request:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'images/**'
+      - '.github/workflows/screenshots.yml'
+      - 'scripts/screenshots.mjs'
+  workflow_dispatch:
+  schedule:
+    # Weekly visual snapshot (Monday 07:07 UTC)
+    - cron: '7 7 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    name: Capture page screenshots
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright Chromium
+        run: |
+          npm init -y
+          npm install playwright@1.49.1
+          npx playwright install chromium --with-deps
+
+      - name: Start local static server
+        run: |
+          python3 -m http.server 8080 &
+          echo $! > /tmp/static-server.pid
+          # Wait for server
+          for i in $(seq 1 30); do
+            if curl -sf http://127.0.0.1:8080/index.html >/dev/null; then
+              echo "Server ready"
+              exit 0
+            fi
+            sleep 0.5
+          done
+          echo "Server failed to start"
+          exit 1
+
+      - name: Capture screenshots
+        run: node scripts/screenshots.mjs
+
+      - name: Stop server
+        if: always()
+        run: |
+          if [ -f /tmp/static-server.pid ]; then
+            kill "$(cat /tmp/static-server.pid)" || true
+          fi
+
+      - name: Upload screenshots artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: page-screenshots
+          path: screenshots/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Screenshots" >> "$GITHUB_STEP_SUMMARY"
+          if [ -d screenshots ]; then
+            echo "| File | Size |" >> "$GITHUB_STEP_SUMMARY"
+            echo "|------|------|" >> "$GITHUB_STEP_SUMMARY"
+            find screenshots -type f | sort | while read -r f; do
+              size=$(wc -c < "$f" | tr -d ' ')
+              echo "| \`$(basename "$f")\` | ${size} bytes |" >> "$GITHUB_STEP_SUMMARY"
+            done
+          else
+            echo "No screenshots directory produced." >> "$GITHUB_STEP_SUMMARY"
+          fi
