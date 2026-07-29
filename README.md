@@ -14,6 +14,25 @@ The pursuit of knowledge in the martial arts is a journey enriched by its vast a
 
 ---
 
+## Words from the Author
+
+My name is **Jon-Arve Constantine Grønsberg-Ovesen**. I care about the places where discipline, history, and the written word meet—and few fields hold that intersection as tightly as the martial arts. What began as a practical hunger to find *reliable* books, treatises, and archives grew into this guide: a map of libraries, publishers, journals, and primary sources that I wished had existed when I first tried to orient myself in a landscape that is equal parts profound and noisy.
+
+I am not writing from a pedestal of institutional authority. I write as someone who has spent long evenings following footnotes into Fechtbücher and Bubishi commentaries, comparing translations of Musashi, chasing catalog entries from the Kodokan to Wiktenauer, and learning—sometimes the hard way—which “must-read” titles are canonical and which are merely well marketed. Along the way I kept notes. Those notes became lists; the lists became sections; the sections became this site. If the tone is careful, it is because the literature deserves care. If the tone is personal, it is because the search itself has been personal: a way of understanding how people across centuries tried to preserve skill, ethics, and strategy on the page.
+
+**Art, science, and technology** are the three threads that run through how I work. Martial arts literature sits naturally at their crossing—illustrated manuscripts and modern sport science, philology and practical reconstruction, open digital archives and the stubborn materiality of a well-printed book. I prefer sources that can be checked, editions that name their translators, and institutions that open their catalogs even when they cannot open every shelf.
+
+This project is dedicated to the public domain under **CC0 1.0**. Corrections and additions are welcome.
+
+**Full personal note:** [`author.html`](author.html)
+
+**Contact**
+- **Name:** Jon-Arve Constantine Grønsberg-Ovesen
+- **GitHub:** [@GizzZmo](https://github.com/GizzZmo)
+- **Phone:** [+47 478 20 914](tel:+4747820914)
+
+---
+
 ## Quick Start
 
 No installation required. This is a static website.
@@ -59,64 +78,20 @@ Every CI run also uploads a **martial-arts-site** artifact (zip + tar.gz) you ca
 
 Screenshot script: [`scripts/screenshots.mjs`](scripts/screenshots.mjs).
 
-Local regeneration (optional):
-
-```bash
-python3 -m http.server 8080 &
-# in another shell, after npm install playwright && npx playwright install chromium
-BASE_URL=http://127.0.0.1:8080 node scripts/screenshots.mjs
-```
-
 ---
 
 ## Usage Examples
 
-### 1. Browse the full guide offline
-```bash
-git clone https://github.com/GizzZmo/martial_arts.git
-cd martial_arts
-open index.html          # macOS
-# or
-xdg-open index.html      # Linux
-# or just double-click index.html on Windows
-```
-
-### 2. Jump straight to a specific section
-Open any of these files directly in your browser:
+### Jump straight to a specific section
 
 | Goal | Open this file |
 |------|----------------|
+| Read the author’s personal note | [`author.html`](author.html) |
 | Find digital archives + direct primary-source links | [`libraries-archives.html`](libraries-archives.html) |
 | Discover specialist publishers | [`publishers.html`](publishers.html) |
 | Look up academic journals & bibliographies | [`scholarship.html`](scholarship.html) |
 | Browse curated essential books | [`book-compendium.html`](book-compendium.html) |
-| Get advice on building a personal collection | [`building-library.html`](building-library.html) |
-| Read the industry trends analysis | [`martial_arts_industry_trends.html`](martial_arts_industry_trends.html) |
 | Prefer a wiki-style layout | [`wiki.html`](wiki.html) |
-
-### 3. Typical research workflows
-
-**Practitioner wanting foundational texts for their art**  
-→ Start with [`book-compendium.html`](book-compendium.html) → filter by art (Karate, Judo, Aikido, HEMA, etc.) → note recommended editions and publishers → cross-check availability via the publishers section.
-
-**Historian / HEMA researcher looking for primary sources**  
-→ Go to [`libraries-archives.html`](libraries-archives.html) → use the **Direct Download Links** section (Wiktenauer I.33, Silver *Paradoxes*, HROARR manuals, ChineseLongSword free scans, Internet Archive, etc.) → then consult the historical treatises tables in the book compendium.
-
-**Someone building a personal martial arts library**  
-→ Read [`building-library.html`](building-library.html) for strategy → use the publishers and book compendium sections to prioritize purchases → check free digital resources (Wiktenauer, Project Gutenberg, Internet Archive) first.
-
-**Academic writing a paper on martial arts literature**  
-→ Use [`scholarship.html`](scholarship.html) for journals and bibliographies → cite the curated lists and tables → explore the industry trends page for broader context.
-
-### 4. Serve it locally (optional)
-```bash
-# Python 3
-python -m http.server 8000
-# then visit http://localhost:8000
-
-# or with Node.js
-npx serve .
-```
 
 ---
 
@@ -124,91 +99,16 @@ npx serve .
 
 | Section | Description | File |
 |---------|-------------|------|
+| **Author** | Personal words from Jon-Arve Constantine Grønsberg-Ovesen | [author.html](author.html) |
 | **Introduction** | The indispensable role of text in martial traditions | [introduction.html](introduction.html) |
-| **Libraries & Archives** | Institutional libraries, digital archives, specialized collections, **and selected direct download links for primary sources** | [libraries-archives.html](libraries-archives.html) |
-| **Publishers** | Specialist and academic publishers of martial arts texts (Tuttle, Shambhala, Kodansha, Turtle Press, and more) | [publishers.html](publishers.html) |
-| **Scholarship** | Academic journals, magazines, and key bibliographies | [scholarship.html](scholarship.html) |
-| **Book Compendium** | Curated list of historical treatises, seminal works by masters, scholarly books, and instructional guides | [book-compendium.html](book-compendium.html) |
-| **Building Your Library** | Practical recommendations for collecting martial arts literature | [building-library.html](building-library.html) |
+| **Libraries & Archives** | Institutional libraries, digital archives, and direct primary-source links | [libraries-archives.html](libraries-archives.html) |
+| **Publishers** | Specialist and academic publishers | [publishers.html](publishers.html) |
+| **Scholarship** | Journals, magazines, and bibliographies | [scholarship.html](scholarship.html) |
+| **Book Compendium** | Historical treatises, masters, and scholarly works | [book-compendium.html](book-compendium.html) |
+| **Building Your Library** | Practical collecting advice | [building-library.html](building-library.html) |
 | **Conclusion** | Summary and future directions | [conclusion.html](conclusion.html) |
-| **Industry Trends** | Analysis of the martial arts literature and publishing landscape | [martial_arts_industry_trends.html](martial_arts_industry_trends.html) |
-| **Wiki View** | Alternative wiki-style presentation of the material | [wiki.html](wiki.html) |
-
-The main entry point [`index.html`](index.html) contains the full report with navigation.
-
----
-
-## Key Resources Covered
-
-### Digital Archives & Primary Sources (highlighted)
-
-| Resource | Focus | Access |
-|----------|-------|--------|
-| **[Wiktenauer](https://wiktenauer.com)** | HEMA fencing manuals & wrestling treatises (Liechtenauer, Fiore, Talhoffer, I.33, etc.) | Free scans, transcriptions, many translations |
-| **[ChineseLongSword.com](https://chineselongsword.com)** | Ming-dynasty Chinese weapon manuals (Long Saber, Spear, Shaolin Staff, etc.) | Free scans + paid English translations |
-| **[Shaolin Kung Fu Online Library](https://shaolinkungfulibrary.com)** | 1910s–1950s Shaolin & Chinese texts in English translation | Paid digital & print |
-| **[Internet Archive](https://archive.org)** | Scans of out-of-print martial arts books and manuals | Free |
-| **[Project Gutenberg](https://gutenberg.org)** | Public-domain English fencing & self-defense texts | Free |
-| **[HROARR](https://hroarr.com)** | HEMA manuals & research downloads | Free |
-| **[Kodokan Judo Museum & Library](https://kdkjd.org/judo-museum-library/)** | Judo primary materials | Free online catalogs; closed-stack access on site |
-
-**Selected direct links** are in the **Direct Download Links** section of [`libraries-archives.html`](libraries-archives.html).
-
-### Publishers
-Turtle Press · Via Media · Shambhala · Kodansha · Tuttle · and major academic presses
-
-### Essential Texts Highlighted
-- Classical treatises (*Bubishi*, *Go Rin No Sho*, *Hagakure*, Liechtenauer tradition, Fiore dei Liberi…)
-- Foundational works by Funakoshi, Kano, Ueshiba, Bruce Lee, Donn Draeger, and others
-- Scholarly encyclopedias and modern research
-
----
-
-## Suggested improvements (roadmap)
-
-### Content
-1. **Sync `index.html` with section pages** — `libraries-archives.html` is ahead of the monolithic `index.html` (e.g. Internet Archive, HROARR, direct download links). Either generate section pages from a single source or periodically diff-merge.
-2. **Link health checks in CI** — expand the current relative-link checker with scheduled external URL probing (soft-fail / report-only) for Wiktenauer, IA, publishers, etc.
-3. **Structured data** — optional JSON/YAML catalog of books & archives for search, filtering, and future API-ish use.
-4. **More primary-source deep links** — Capo Ferro, Mair, Ringeck/Danzig glosses, official federation manuals (AJKF, Kukkiwon catalogs).
-5. **Translations / i18n** — at least Norwegian or bilingual summaries for accessibility to non-English readers.
-
-### UX / design
-6. **Shared layout component** — extract common header/nav/footer into a small build step (11ty, Nunjucks, or simple includes) so wiki + section pages stay consistent.
-7. **Search** — client-side search (Pagefind / Lunr) over the static HTML.
-8. **Dark mode** and stronger mobile table UX (card layout for narrow screens).
-9. **Move banner image** into `assets/` and compress / provide WebP + fallback.
-10. **Pin Tailwind** — replace CDN Tailwind with a built CSS file for offline reliability and reproducibility.
-
-### Ops
-11. **GitHub Pages custom domain** (optional) once the default `*.github.io/martial_arts/` URL is verified.
-12. **Release workflow** — on tag `v*`, attach the site zip/tar from CI as release assets.
-13. **Dependabot** for Actions versions only (no app deps required yet).
-14. **CODE_OF_CONDUCT.md** — referenced by CONTRIBUTING but not present yet.
-
----
-
-## Releases
-
-See the [Releases page](https://github.com/GizzZmo/martial_arts/releases) for versioned snapshots of the guide:
-
-- **v1.5.0** — *The Indispensable Role of Text in Martial Traditions*
-- **v1.0.1** — Academics in the form of science & (martial) arts
-- **v0.0.1** — Guardians of Tradition & Digital Frontiers
-
----
-
-## Contributing
-
-Contributions are welcome — whether new resources, corrections, translations, or improvements to the HTML presentation.
-
-Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** for guidelines on content quality, submission process, and technical standards.
-
-Issue templates are available for:
-- Content contributions
-- Bug reports
-- Feature requests
-- Questions
+| **Industry Trends** | Publishing and literature landscape | [martial_arts_industry_trends.html](martial_arts_industry_trends.html) |
+| **Wiki View** | Section hub | [wiki.html](wiki.html) |
 
 ---
 
@@ -216,12 +116,12 @@ Issue templates are available for:
 
 This work is dedicated to the public domain under **[CC0 1.0 Universal](LICENSE)**.
 
-You are free to copy, modify, distribute, and use the material for any purpose, without restriction.
-
 ---
 
 ## Author
 
 **Jon-Arve Constantine Grønsberg-Ovesen** ([@GizzZmo](https://github.com/GizzZmo))
+
+Phone: [+47 478 20 914](tel:+4747820914)
 
 Art, science and technology.
