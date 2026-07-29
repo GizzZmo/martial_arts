@@ -59,10 +59,10 @@ Open any of these files directly in your browser:
 → Start with [`book-compendium.html`](book-compendium.html) → filter by art (Karate, Judo, Aikido, HEMA, etc.) → note recommended editions and publishers → cross-check availability via the publishers section.
 
 **Historian / HEMA researcher looking for primary sources**  
-→ Go to [`libraries-archives.html`](libraries-archives.html) → focus on Wiktenauer, Royal Armouries Ms. I.33, Fiore, Liechtenauer tradition → then consult the historical treatises tables in the book compendium.
+→ Go to [`libraries-archives.html`](libraries-archives.html) → focus on Wiktenauer, ChineseLongSword, Internet Archive, HROARR → then consult the historical treatises tables in the book compendium.
 
 **Someone building a personal martial arts library**  
-→ Read [`building-library.html`](building-library.html) for strategy → use the publishers and book compendium sections to prioritize purchases → check free digital resources (Project Gutenberg, Wiktenauer) first.
+→ Read [`building-library.html`](building-library.html) for strategy → use the publishers and book compendium sections to prioritize purchases → check free digital resources (Wiktenauer, Project Gutenberg, Internet Archive) first.
 
 **Academic writing a paper on martial arts literature**  
 → Use [`scholarship.html`](scholarship.html) for journals and bibliographies → cite the curated lists and tables → explore the industry trends page for broader context.
@@ -86,7 +86,7 @@ npx serve .
 | Section | Description | File |
 |---------|-------------|------|
 | **Introduction** | The indispensable role of text in martial traditions | [introduction.html](introduction.html) |
-| **Libraries & Archives** | Institutional libraries, digital archives, and specialized collections (Wiktenauer, Kodokan, Shaolin Library, etc.) | [libraries-archives.html](libraries-archives.html) |
+| **Libraries & Archives** | Institutional libraries, digital archives, and specialized collections (Wiktenauer, ChineseLongSword, Kodokan, Internet Archive, etc.) | [libraries-archives.html](libraries-archives.html) |
 | **Publishers** | Specialist and academic publishers of martial arts texts (Tuttle, Shambhala, Kodansha, Turtle Press, and more) | [publishers.html](publishers.html) |
 | **Scholarship** | Academic journals, magazines, and key bibliographies | [scholarship.html](scholarship.html) |
 | **Book Compendium** | Curated list of historical treatises, seminal works by masters, scholarly books, and instructional guides | [book-compendium.html](book-compendium.html) |
@@ -101,11 +101,21 @@ The main entry point [`index.html`](index.html) contains the full report with na
 
 ## Key Resources Covered
 
-### Libraries & Digital Archives
-- **Wiktenauer** — world's largest open library of Historical European Martial Arts (HEMA) manuscripts
-- **Kodokan Judo Museum & Library** (Tokyo)
-- **Shaolin Kung Fu Online Library** and **ChineseLongSword.com**
-- University of Michigan Library, Project Gutenberg, and others
+### Digital Archives & Primary Sources (highlighted)
+
+These are among the most valuable free or low-cost starting points for serious study:
+
+| Resource | Focus | Access |
+|----------|-------|--------|
+| **[Wiktenauer](https://wiktenauer.com)** | HEMA fencing manuals & wrestling treatises (Liechtenauer, Fiore, Talhoffer, I.33, etc.) | Free scans, transcriptions, many translations |
+| **[ChineseLongSword.com](https://chineselongsword.com)** | Ming-dynasty Chinese weapon manuals (Long Saber, Spear, Shaolin Staff, etc.) | Free scans + paid English translations |
+| **[Shaolin Kung Fu Online Library](https://shaolinkungfulibrary.com)** | 1910s–1950s Shaolin & Chinese texts in English translation | Paid digital & print |
+| **[Internet Archive](https://archive.org)** | Scans of out-of-print martial arts books and manuals | Free |
+| **[Project Gutenberg](https://gutenberg.org)** | Public-domain English fencing & self-defense texts | Free |
+| **[HROARR](https://hroarr.com)** | HEMA manuals & research downloads | Free |
+| **[Kodokan Judo Museum & Library](https://kdkjd.org/judo-museum-library/)** | Judo primary materials | Free online catalogs; closed-stack access on site |
+
+Full details, institutional libraries, and additional platforms are in [`libraries-archives.html`](libraries-archives.html).
 
 ### Publishers
 Turtle Press · Via Media · Shambhala · Kodansha · Tuttle · and major academic presses
